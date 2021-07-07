@@ -1,13 +1,231 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background: whitesmoke;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.background-cover {
+  height: 200px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  height: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #003b6f;
+  border-radius: 50%;
+  padding: 30px;
+  border-top: solid 3px #003b6f;
+}
+
+#h1span {
+  color: #ff4500;
+}
+
+p,
+a, li {
+  font-family: "Poppins";
+  font-size: 10px;
+  line-height: 1rem;
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+  width: 100%;
+  background: white;
+  color: #003b6f;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: whitesmoke;
+}
+
+/* input & buttons */
+.inputs {
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+input {
+  border: 1px solid #003b6f;
+  border-radius: 10px;
+  color: #003b6f;
+  width: 60%;
+  height: 30px;
+  padding-left: 10px;
+  background: white;
+  opacity: 0.9;
+}
+
+input:focus,
+input:focus {
+  outline: none;
+  border: 1px solid #333;
+}
+
+#recipe-button {
+  cursor: pointer;
+  width: 5%;
+  height: 30px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: #003b6f;
+  margin-left: 5px;
+}
+
+
+/* cocktail */
+.cocktail-result {
+  width: 100%;
+  max-width: 300px;
+  margin: 30px auto 0;
+}
+
+#cocktail-button {
+  margin-left: 30px;
+  cursor: pointer;
+  width: 15%;
+  height: 30px;
+  border: none;
+  background: #003b6f;
+  font-size: 15px;
+  color: whitesmoke;
+  font-family: "Bebas Neue";
+  letter-spacing: 1px;
+}
+
+#cocktail-button > span {
+  background: transparent;
+}
+
+.fa-cocktail {
+  color: tomato;
+  background: transparent;
+}
+
+.cocktail-result {
+  width: 100%;
+  text-align: center;
+}
+
+#cocktail-picture {
+  width: 150px;
+  border-radius: 50%;
+  border: white solid 5px;
+}
+
+#cocktail-title {
+  background: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+  font-size: 12px;
+  border-bottom: 1px solid white;
+}
+
+/* recipe results */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.items {
+  width: 100%;
+  background: white;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.items img {
+  width: 100%;
+  height: 200px;
+}
+
+.search-result {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.resultsDisplay {
+  padding: 0 5px 0 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+.viewLink {
+  align-self: flex-start;
+  font-family: "Bebas Neue";
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: orangered;
+  background: white;
+  padding: 5px;
+  text-align: right;
+  width: 90px;
+}
+
+.itemInfo {
+  background: white;
+  padding: 0 10px;
+}
+
+/* mediaquery */
+@media only screen and (max-width: 600px)  {
+  .search-result {
+    grid-gap: 10px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  #cocktail-button > span {
+    display: none;
+  }
 }
